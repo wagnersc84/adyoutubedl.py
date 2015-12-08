@@ -1,5 +1,5 @@
 #!/bin/bash
-divisor="\n\n==================================================================================================="
+divisor="\n\n================================================================================"
 linkdoyoutubedl='https://yt-dl.org/downloads/2015.12.06/youtube-dl'
 script='adyoutubedl.py'
 linkdoscript='https://raw.githubusercontent.com/wagnersc84/adyoutubedl.py/master/adyoutubedl.py'
