@@ -1,5 +1,5 @@
 #!/bin/bash
-divisor="\n\n==================================================================================================="
+divisor="\n\n================================================================================"
 script='adyoutubedl.py'
 nomedoinstalador='instalador.sh'
 linkdoinstalador='https://raw.githubusercontent.com/wagnersc84/adyoutubedl.py/master/instalador'
