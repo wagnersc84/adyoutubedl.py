@@ -1,0 +1,24 @@
+#!/bin/bash
+divisor="\n\n==================================================================================================="
+linkdoyoutubedl='https://yt-dl.org/downloads/2015.12.06/youtube-dl'
+script='adyoutubedl.py'
+linkdoscript='https://cdn.fbsbx.com/hphotos-xtl1/v/t59.2708-21/12361114_1147833531901203_1900816141_n.py/adyoutubedl.py?oh=5daefbfcf53139b2348b1e08527448b1&oe=56684E2A&dl=1'
+echo "$USERNAME, primeiro algumas coisas precisam ser atualizadas e, outras, instaladas (precisará da sua senha logo à frente)"
+echo -e "$divisor"
+echo 'atualizando lista de pacotes...'
+echo 'sudo apt-get update'
+sudo apt-get update
+echo -e "$divisor"
+echo 'instalando libavcodec-extra* e libav-tools (serve para extrair o audio dos vídeos)...'
+sudo apt-get -y install libavcodec-extra*
+sudo apt-get -y install libav-tools
+echo -e "$divisor"
+echo 'instalando curl e youtube-dl (que baixa os vídeos)...'
+sudo apt-get install curl
+sudo curl "$linkdoyoutubedl" -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+sudo youtube-dl -U
+echo -e "$divisor"
+echo "instalando $script (script q vc irá usar para baixar os vídeos através do youtube-dl de uma forma mais fácil)..."
+sudo curl "$linkdoscript" -o /usr/local/bin/$script
+sudo chmod a+rx /usr/local/bin/$script
