@@ -2,7 +2,7 @@
 divisor="\n\n==================================================================================================="
 script='adyoutubedl.py'
 nomedoinstalador='instalador.sh'
-linkdoinstalador='https://cdn.fbsbx.com/hphotos-xfp1/v/t59.2708-21/12316689_1147835421901014_536093735_n.jpg/instalador.jpg?oh=3ebf5bdc311f872fc6cfe2846ef4f3d2&oe=56683501&dl=1'
+linkdoinstalador='https://raw.githubusercontent.com/wagnersc84/adyoutubedl.py/master/instalador'
 echo -e "$divisor"
 echo 'Baixando instalador...'
 curl "$linkdoinstalador" -o ./$nomedoinstalador
