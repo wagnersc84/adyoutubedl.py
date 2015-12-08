@@ -2,7 +2,7 @@
 divisor="\n\n==================================================================================================="
 linkdoyoutubedl='https://yt-dl.org/downloads/2015.12.06/youtube-dl'
 script='adyoutubedl.py'
-linkdoscript='https://cdn.fbsbx.com/hphotos-xtl1/v/t59.2708-21/12361114_1147833531901203_1900816141_n.py/adyoutubedl.py?oh=5daefbfcf53139b2348b1e08527448b1&oe=56684E2A&dl=1'
+linkdoscript='https://raw.githubusercontent.com/wagnersc84/adyoutubedl.py/master/adyoutubedl.py'
 echo "$USERNAME, primeiro algumas coisas precisam ser atualizadas e, outras, instaladas (precisará da sua senha logo à frente)"
 echo -e "$divisor"
 echo 'atualizando lista de pacotes...'
