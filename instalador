@@ -15,7 +15,8 @@ sudo apt-get -y install libav-tools
 echo -e "$divisor"
 echo 'instalando curl e youtube-dl (que baixa os vídeos)...'
 sudo apt-get install curl
-sudo curl "$linkdoyoutubedl" -o /usr/local/bin/youtube-dl
+#sudo curl "$linkdoyoutubedl" -o /usr/local/bin/youtube-dl
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 sudo chmod a+rx /usr/local/bin/youtube-dl
 sudo youtube-dl -U
 echo -e "$divisor"
