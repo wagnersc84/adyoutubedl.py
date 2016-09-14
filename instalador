@@ -1,6 +1,6 @@
 #!/bin/bash
 divisor="\n\n================================================================================"
-linkdoyoutubedl='https://yt-dl.org/downloads/2015.12.06/youtube-dl'
+linkdoyoutubedl='https://yt-dl.org/downloads/latest/youtube-dl'
 script='adyoutubedl.py'
 linkdoscript='https://raw.githubusercontent.com/wagnersc84/adyoutubedl.py/master/adyoutubedl.py'
 echo "$USERNAME, primeiro algumas coisas precisam ser atualizadas e, outras, instaladas (precisará da sua senha logo à frente)"
