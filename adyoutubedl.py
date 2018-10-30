@@ -15,7 +15,7 @@ nomedoscript = path.basename(argv[0])
 arquivodeidsinv = nomedoscript + " - idsinválidos.bvp"
 arquivodeback = "." + nomedoscript + " - back.bvp"
 numinv = 0
-filtro = ("0", "\n", "00","000","0000","00000", "", " ", "   ","    ","     ","      ",)
+filtro = ("0", "\n", "00","000","0000","00000", "", " ", "   ","    ","     ","      ", "[InternetShortcut]")
 
 listadesim = ("s", "y", "sim", "yes", "si", "claro", "lógico", "logico", 
 "vamo torah!", "com certeza", "certamente", 'demorou', 'demoro', 'fechou')
@@ -169,11 +169,13 @@ del ler_arquivo
 print len(lista),"Links encontrados. Filtrando os repetidos ..."
 for cada_item in lista:
 	if cada_item in filtro: continue
+	if cada_item[0:4] == "URL=":
+		cada_item = cada_item[4:]
 	if cada_item not in lista2: lista2.append(cada_item)
 lista = lista2
 del lista2
 
-#cria um arquivo de backup em cwd da lista
+#cria um arquivo de backup da lista em cwd 
 objarquivodeback = open(arquivodeback,"a")
 for linha in lista:
 	objarquivodeback.write(linha+"\n")
