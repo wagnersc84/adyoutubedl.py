@@ -1,4 +1,4 @@
-Baixe e execute o arquivo 'instalar pyyoutubedl.sh' (DL: https://goo.gl/nOiO8A ) em um terminal. Ao final do processo, o adyoutubedl.py já poderá ser chamado pelo terminal.
+Baixe e execute o arquivo 'instalar pyyoutubedl.sh' (DL: https://goo.gl/g7wm2i ) em um terminal. Ao final do processo, o adyoutubedl.py já poderá ser chamado pelo terminal.
 Se o teu gerenciador de arquivos padrão for o Nemo, e vc não estiver familiarizado a usar o terminal, sugiro que crie um link para /usr/local/bin/adyoutubedl.py na sua Área de trabalho (ou em qualquer outro local conveniente) e execute-o "em terminal" quando quiser baixar algum vídeo da internet com praticidade.
 
 Donation :3
