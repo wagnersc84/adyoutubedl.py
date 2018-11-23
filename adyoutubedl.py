@@ -70,8 +70,12 @@ def ler_arquivo(arquivo):
 	global lista
 	objarquivo = open(arquivo)
 	for cada_item in objarquivo.readlines():
-		if cada_item.strip() in filtro: continue
-		lista.append(cada_item.strip())
+		for cada_itemd in cada_item.split(" "):			
+			if cada_itemd.strip() in filtro: continue
+			lista.append(cada_itemd.strip())
+	
+	#	if cada_item.strip() in filtro: continue
+	#	lista.append(cada_item.strip())
 	objarquivo.close()
 	remove(arquivo)
 
