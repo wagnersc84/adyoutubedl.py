@@ -172,7 +172,7 @@ for cada_item in lista:
 	if cada_item in filtro: continue
 	if cada_item[0:4] == "URL=":
 		cada_item = cada_item[4:]
-	if len(cada_item) < 12 : continue	
+	if len(cada_item) < 11 : continue	
 	if cada_item not in lista2: lista2.append(cada_item)
 lista = lista2
 del lista2
