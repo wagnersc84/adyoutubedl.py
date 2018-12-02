@@ -1,5 +1,5 @@
 #!/bin/bash
-divisor="\n\n================================================================================"
+divisor="\n\n==========================================================="
 linkdoyoutubedl='https://yt-dl.org/downloads/latest/youtube-dl'
 script='adyoutubedl.py'
 linkdoscript='https://raw.githubusercontent.com/wagnersc84/adyoutubedl.py/master/adyoutubedl.py'
@@ -14,7 +14,7 @@ sudo apt-get -y install libavcodec-extra*
 sudo apt-get -y install libav-tools
 echo -e "$divisor"
 echo 'instalando curl e youtube-dl (que baixa os vídeos)...'
-sudo apt-get install curl
+sudo apt install curl
 #sudo curl "$linkdoyoutubedl" -o /usr/local/bin/youtube-dl
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 sudo chmod a+rx /usr/local/bin/youtube-dl

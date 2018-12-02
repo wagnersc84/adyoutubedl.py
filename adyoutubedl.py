@@ -6,9 +6,9 @@ from sys import argv
 from subprocess import call, check_output
 import datetime, time
 
-call("clear")
+#call("clear")
 
-linhadecomando = ["youtube-dl", "-i", "-c", "-k", "-l"]
+linhadecomando = ["youtube-dl","--add-metadata", "-i", "-c", "-k", "-l"]
 lista = argv[1:]
 lista2 = []
 nomedoscript = path.basename(argv[0])
@@ -29,9 +29,15 @@ nomedousuario = getlogin().capitalize()
 pastadeconf = path.join(pastadousuario, "." + nomedoscript)
 arqaudioconf = path.join(pastadeconf, "audio.txt")
 moverSN = False
-############################	FUNÇÕES		############################################################################################
-def Divisor(n = 40):
-	print "\n","-=-"*n,"\n"
+
+##########################################
+#################FUNÇÕES##################
+##########################################
+
+def Divisor(n = 25):
+	print "\n","-=-"*n
+        print "-=-"*n
+        print "-=-"*n,"\n"
 
 def Link():
 	global lista
@@ -177,7 +183,10 @@ for cada_item in lista:
 lista = lista2
 del lista2
 
+##########################################
 #cria um arquivo de backup da lista em cwd 
+##########################################
+
 objarquivodeback = open(arquivodeback,"a")
 for linha in lista:
 	objarquivodeback.write(linha+"\n")
@@ -189,14 +198,19 @@ for n, url in enumerate(lista):
 	print str(n+1)+")",url
 Divisor()
 
+##########################################
 # Verifica se o audio deverá ser extraído.
+##########################################
 
 if ver_formato() and uname()[0].strip().lower() == "linux":
 	moverSN = decisao("\nMover o audio extraído para sua pasta de musicas?\n")
-call("clear")
+#call("clear")
 #del formato
 
+##########################################
 # Verifica para onde o audio deverá ser movido após ser extraído.
+##########################################
+
 if moverSN:
 	pastademusica = False
 	if path.exists(arqaudioconf):
@@ -210,7 +224,10 @@ if moverSN:
 		moverSN = encontra_pasta_audio()
 del encontra_pasta_audio
 
-################   principal	#########################
+##########################################
+################   principal	#########
+##########################################
+
 ts1 = datetime.datetime.now()
 for n,baixando in enumerate(lista):
 	try:
@@ -222,10 +239,13 @@ ts2 = datetime.datetime.now() - ts1
 del motor
 remove(arquivodeback)
 
+##########################################
 # Mostra a lista dos links que falharam.
+##########################################
+
 if numinv != 0:
 	#if not moverSN or erroyoutube != 0: Divisor()
-	call("clear")
+	#call("clear")
 	Divisor()
 	print 'Tempo transcorrido: {}'.format(ts2)
 	Divisor()
