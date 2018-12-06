@@ -14,7 +14,7 @@ sudo apt-get -y install libavcodec-extra*
 sudo apt-get -y install libav-tools
 echo -e "$divisor"
 echo 'instalando curl e youtube-dl (que baixa os vídeos)...'
-sudo apt install curl
+sudo apt install curl atomicparsley
 #sudo curl "$linkdoyoutubedl" -o /usr/local/bin/youtube-dl
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 sudo chmod a+rx /usr/local/bin/youtube-dl
@@ -23,3 +23,4 @@ echo -e "$divisor"
 echo "instalando $script (script q vc irá usar para baixar os vídeos através do youtube-dl de uma forma mais fácil)..."
 sudo curl "$linkdoscript" -o /usr/local/bin/$script
 sudo chmod a+rx /usr/local/bin/$script
+

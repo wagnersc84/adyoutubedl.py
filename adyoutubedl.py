@@ -8,7 +8,7 @@ import datetime, time
 
 #call("clear")
 
-linhadecomando = ["youtube-dl","--add-metadata", "-i", "-c", "-k", "-l"]
+linhadecomando = ["youtube-dl", "--add-metadata", "-i", "-c", "-k", "-l"]
 lista = argv[1:]
 lista2 = []
 nomedoscript = path.basename(argv[0])
@@ -55,7 +55,7 @@ def ver_formato():
 	while 1:
 		formato = raw_input(mensagem_formato).lower().strip()
 		if formato in formatos:
-			linhadecomando.extend(("--extract-audio", "--audio-quality", "0", "--audio-format", formato))
+			linhadecomando.extend(("--embed-thumbnail","--extract-audio", "--audio-quality", "0", "--audio-format", formato))
 			return True
 		elif formato == "":
 			return False
